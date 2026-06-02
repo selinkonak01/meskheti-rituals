@@ -1,0 +1,114 @@
+/* Productpagina stijlen */
+
+.product-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Terugknop */
+.back-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #d4cfc8;
+  opacity: 0.6;
+  margin-bottom: 32px;
+  transition: opacity 0.2s;
+}
+
+.back-link:hover {
+  opacity: 1;
+}
+
+/* Product layout */
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* Afbeelding */
+.product-figure img {
+  width: 100%;
+  max-width: 440px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.product-figure figcaption {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.75rem;
+  opacity: 0.4;
+  font-style: italic;
+}
+
+/* Product info tekst */
+.product-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #4a7c59;
+  margin-bottom: 12px;
+}
+
+.product-info h1 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+
+.product-info > p {
+  line-height: 1.8;
+  margin-bottom: 28px;
+  font-size: 1rem;
+}
+
+.product-info h2 {
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+  margin-top: 28px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Specificaties lijst */
+.specs {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 36px;
+}
+
+.specs li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.9rem;
+}
+
+.specs li::before {
+  content: "— ";
+  color: #4a7c59;
+}
+
+/* Knoppen */
+.product-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .product-detail {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .product-figure {
+    flex: 1;
+  }
+
+  .product-info {
+    flex: 1;
+  }
+}

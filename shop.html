@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop — Meskheti Rituals</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/shop.css" />
+  </head>
+  <body>
+
+    <header>
+      <img src="./assets/images/logo-meskheti-rituals.png" alt="Meskheti Rituals logo" class="logo" />
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="shop-layout">
+
+        <!-- Sidebar: winkelmandje & wishlist -->
+        <aside class="sidebar">
+          <div class="sidebar-block">
+            <h2>Winkelmandje</h2>
+            <div class="cart-items">
+              <p class="sidebar-empty">Leeg</p>
+            </div>
+          </div>
+          <div class="sidebar-block">
+            <h2>Wishlist</h2>
+            <div class="wishlist-items">
+              <p class="sidebar-empty">Leeg</p>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Producten -->
+        <section class="products-section">
+          <h2>Onze producten</h2>
+          <p class="products-subtitle">Collectie 2026</p>
+          <div class="products-grid">
+
+            <a href="BlackSeaSeaSaltScrub.html" class="product-link">
+              <article class="product-card card-scrub">
+                <div class="card-label">
+                  <h3>Black Sea Sea Salt Scrub</h3>
+                  <p>Exfoliërende scrub met natuurlijk zeezout.</p>
+                  <div class="card-actions">
+                    <button class="btn-cart" onclick="event.preventDefault(); addToCart('Black Sea Sea Salt Scrub')">+ Mandje</button>
+                    <button class="btn-wish" onclick="event.preventDefault(); addToWishlist('Black Sea Sea Salt Scrub')">♡ Wishlist</button>
+                  </div>
+                </div>
+              </article>
+            </a>
+
+            <a href="MeskhetiRoseFacialMist.html" class="product-link">
+              <article class="product-card card-mist">
+                <div class="card-label">
+                  <h3>Rose Facial Mist</h3>
+                  <p>Hydraterende rozenmist die de huid verfrist.</p>
+                  <div class="card-actions">
+                    <button class="btn-cart" onclick="event.preventDefault(); addToCart('Rose Facial Mist')">+ Mandje</button>
+                    <button class="btn-wish" onclick="event.preventDefault(); addToWishlist('Rose Facial Mist')">♡ Wishlist</button>
+                  </div>
+                </div>
+              </article>
+            </a>
+
+            <a href="SaffronGlowOil.html" class="product-link">
+              <article class="product-card card-oil">
+                <div class="card-label">
+                  <h3>Saffron Glow Oil</h3>
+                  <p>Voedende olie met saffraanextract.</p>
+                  <div class="card-actions">
+                    <button class="btn-cart" onclick="event.preventDefault(); addToCart('Saffron Glow Oil')">+ Mandje</button>
+                    <button class="btn-wish" onclick="event.preventDefault(); addToWishlist('Saffron Glow Oil')">♡ Wishlist</button>
+                  </div>
+                </div>
+              </article>
+            </a>
+
+            <a href="BlackSeaTeaCandle.html" class="product-link">
+              <article class="product-card card-candle">
+                <div class="card-label">
+                  <h3>Black Sea Tea Candle</h3>
+                  <p>Geurkaars geïnspireerd op traditionele theerituelen.</p>
+                  <div class="card-actions">
+                    <button class="btn-cart" onclick="event.preventDefault(); addToCart('Black Sea Tea Candle')">+ Mandje</button>
+                    <button class="btn-wish" onclick="event.preventDefault(); addToWishlist('Black Sea Tea Candle')">♡ Wishlist</button>
+                  </div>
+                </div>
+              </article>
+            </a>
+
+            <a href="KavkazPapakha.html" class="product-link">
+              <article class="product-card card-papakha">
+                <div class="card-label">
+                  <h3>Kavkaz Papakha</h3>
+                  <p>Traditionele wollen hoed uit de Kaukasus.</p>
+                  <div class="card-actions">
+                    <button class="btn-cart" onclick="event.preventDefault(); addToCart('Kavkaz Papakha')">+ Mandje</button>
+                    <button class="btn-wish" onclick="event.preventDefault(); addToWishlist('Kavkaz Papakha')">♡ Wishlist</button>
+                  </div>
+                </div>
+              </article>
+            </a>
+
+            <a href="BlackSeaTeaSet.html" class="product-link">
+              <article class="product-card card-tea-set">
+                <div class="card-label">
+                  <h3>Black Sea Tea Set</h3>
+                  <p>Authentieke theeset uit de Zwarte Zee-regio.</p>
+                  <div class="card-actions">
+                    <button class="btn-cart" onclick="event.preventDefault(); addToCart('Black Sea Tea Set')">+ Mandje</button>
+                    <button class="btn-wish" onclick="event.preventDefault(); addToWishlist('Black Sea Tea Set')">♡ Wishlist</button>
+                  </div>
+                </div>
+              </article>
+            </a>
+
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2026 Meskheti Rituals</p>
+      <span>✦</span>
+    </footer>
+
+    <script src="./js/shop.js"></script>
+  </body>
+</html>

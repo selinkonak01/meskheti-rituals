@@ -1,0 +1,149 @@
+/* Homepagina stijlen */
+
+/* Hero sectie */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.hero-text {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 48px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  max-width: 480px;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  font-size: 1rem;
+}
+
+/* Bio kaart */
+.bio-card {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 80px 32px 32px;
+  text-align: center;
+  position: relative;
+}
+
+.bio-avatar {
+  position: absolute;
+  top: -44px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bio-avatar img {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4a7c59;
+}
+
+.bio-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.bio-card p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+/* Bestsellers sectie */
+.bestsellers {
+  margin-top: 20px;
+}
+
+.bestsellers h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.bestsellers-subtitle {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4a7c59;
+  margin-bottom: 28px;
+}
+
+.bestsellers-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* Product kaartje */
+.product-card-home {
+  height: 280px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: transform 0.3s;
+}
+
+.product-card-home:hover {
+  transform: scale(1.02);
+}
+
+.product-card-home .label {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+  padding: 32px 20px 20px;
+}
+
+.product-card-home .label h3 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  color: #ffffff;
+}
+
+.product-card-home .label p {
+  font-size: 0.8rem;
+  opacity: 0.75;
+  color: #ffffff;
+}
+
+/* Achtergrondafbeeldingen per product */
+.card-scrub { background-image: url("../assets/images/black-sea-sea-salt-scrub.png"); }
+.card-mist  { background-image: url("../assets/images/rose-facial-mist.png"); }
+.card-olie  { background-image: url("../assets/images/saffron-glow-oil-.png"); }
+
+/* Desktop layout */
+@media (min-width: 900px) {
+  .hero {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .hero-text {
+    flex: 1;
+  }
+
+  .bio-card {
+    flex: 1;
+    margin-top: 50px;
+  }
+
+  .bestsellers-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

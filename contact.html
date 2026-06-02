@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Meskheti Rituals</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+  </head>
+  <body>
+
+    <header>
+      <img src="./assets/images/logo-meskheti-rituals.png" alt="Meskheti Rituals logo" class="logo" />
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="contact-layout">
+
+        <h1>Neem contact op</h1>
+        <p class="contact-subtitle">We helpen je graag verder</p>
+
+        <form class="contact-form" id="contactForm" novalidate>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="naam">Naam</label>
+              <input type="text" id="naam" name="naam" placeholder="Jouw naam" required />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mailadres</label>
+              <input type="email" id="email" name="email" placeholder="jouw@email.com" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="onderwerp">Onderwerp</label>
+            <select id="onderwerp" name="onderwerp">
+              <option value="">Kies een onderwerp…</option>
+              <option value="bestelling">Vraag over bestelling</option>
+              <option value="product">Vraag over product</option>
+              <option value="retour">Retour of ruil</option>
+              <option value="samenwerking">Samenwerking</option>
+              <option value="overig">Overig</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="bericht">Bericht</label>
+            <textarea id="bericht" name="bericht" placeholder="Schrijf hier je bericht…" required></textarea>
+          </div>
+
+          <button type="submit" class="btn">Verstuur bericht</button>
+
+        </form>
+
+        <div class="form-success" id="formSuccess">
+          <p>Bedankt voor je bericht! We nemen zo snel mogelijk contact met je op.</p>
+        </div>
+
+        <!-- Contact info blokken -->
+        <div class="contact-info">
+          <div class="info-block">
+            <h3>E-mail</h3>
+            <p>info@meskhetirituals.com</p>
+          </div>
+          <div class="info-block">
+            <h3>Reactietijd</h3>
+            <p>Binnen 2 werkdagen</p>
+          </div>
+          <div class="info-block">
+            <h3>Locatie</h3>
+            <p>België</p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2026 Meskheti Rituals</p>
+      <span>✦</span>
+    </footer>
+
+    <script>
+      document.getElementById("contactForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        this.style.display = "none";
+        document.getElementById("formSuccess").classList.add("visible");
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,191 @@
+/* Shop pagina stijlen */
+
+/* Layout: sidebar naast producten */
+.shop-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar-block {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.sidebar-block h2 {
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cart-items,
+.wishlist-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 40px;
+}
+
+.cart-item,
+.wishlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cart-item button,
+.wishlist-item button {
+  background: none;
+  border: none;
+  color: rgba(212, 207, 200, 0.4);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.cart-item button:hover,
+.wishlist-item button:hover {
+  color: #c0392b;
+}
+
+.sidebar-empty {
+  font-size: 0.82rem;
+  color: rgba(212, 207, 200, 0.35);
+  font-style: italic;
+}
+
+/* Producten sectie */
+.products-section h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.products-subtitle {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4a7c59;
+  margin-bottom: 28px;
+}
+
+/* Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* Product kaartje */
+.product-card {
+  height: 280px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+}
+
+.product-card .card-label {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.88));
+  padding: 32px 18px 18px;
+}
+
+.product-card .card-label h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: #ffffff;
+}
+
+.product-card .card-label p {
+  font-size: 0.78rem;
+  opacity: 0.75;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+/* Knoppen op kaartje */
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-cart,
+.btn-wish {
+  padding: 7px 14px;
+  border-radius: 5px;
+  font-size: 0.78rem;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.btn-cart {
+  background-color: #4a7c59;
+  color: #ffffff;
+}
+
+.btn-cart:hover {
+  background-color: #3a6347;
+}
+
+.btn-wish {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-wish:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Achtergrondafbeeldingen */
+.card-scrub   { background-image: url("../assets/images/black-sea-sea-salt-scrub.png"); }
+.card-mist    { background-image: url("../assets/images/rose-facial-mist.png"); }
+.card-oil     { background-image: url("../assets/images/saffron-glow-oil-.png"); }
+.card-candle  { background-image: url("../assets/images/black-sea-tea-candle.png"); }
+.card-papakha { background-image: url("../assets/images/kavkaz-papakha-.png"); }
+.card-tea-set { background-image: url("../assets/images/black-sea-tea-set.png"); }
+
+/* Desktop */
+@media (min-width: 900px) {
+  .shop-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .sidebar {
+    width: 260px;
+    position: sticky;
+    top: 90px;
+  }
+
+  .products-section {
+    flex: 1;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
